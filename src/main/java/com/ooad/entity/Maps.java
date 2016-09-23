@@ -5,7 +5,11 @@ import java.util.List;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+/**
+ * Entity for creating a list of maps and its corresponding routes.
+ * @author monishaelumalai
+ *
+ */
 public class Maps {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

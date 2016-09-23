@@ -3,7 +3,11 @@ package com.ooad.entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+/**
+ * Entity to create individual routes for the map.
+ * @author monishaelumalai
+ *
+ */
 public class Route {
 	
 	@Id

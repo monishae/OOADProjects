@@ -46,6 +46,11 @@ public class GameController {
 		return "Hi";
 	}
 
+	/**
+	 * get all the existing maps from the database.
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value = "/allmaps", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
 	public List<Maps> allProfiles() throws Exception{
 		LOGGER.info("Getting all the existing maps");
@@ -63,6 +68,12 @@ public class GameController {
 		return candidateProfiles;
 	}*/
 
+	/**
+	 * 
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value = "/map", consumes = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
 	@ResponseBody
 	public HttpStatus saveProfile(@RequestBody Maps map) throws Exception{
