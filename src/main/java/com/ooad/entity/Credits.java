@@ -4,17 +4,28 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+
 /**
  * Get Credit details of developers
  * @author monishaelumalai
  *
  */
+@JsonPOJOBuilder
 public class Credits {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@JsonProperty("credit_id")
 	private Integer credit_id;
+	
+	@JsonProperty("credit_name")
 	private String credit_name;
+	
+	@JsonProperty("credit_desc")
 	private String credit_desc;
+	
+	@JsonProperty("credit_role")
 	private String credit_role;
 	/**
 	 * @return the credit_id

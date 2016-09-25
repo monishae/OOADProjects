@@ -5,18 +5,31 @@ import java.util.List;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 /**
  * Entity for creating a list of maps and its corresponding routes.
  * @author monishaelumalai
  *
  */
+@JsonPOJOBuilder
 public class Maps {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@JsonProperty("map_id")
 	private Integer map_id;
-	private Integer map_type;
+	
+	@JsonProperty("map_type")
+	private String map_type;
+	
+	@JsonProperty("map_name")
 	private String map_name;
+	
+	@JsonProperty("map_country")
 	private String map_country;
+	
+	@JsonProperty("map_routes")
 	List<Route> map_routes;
 	/**
 	 * @return the map_id
@@ -33,13 +46,13 @@ public class Maps {
 	/**
 	 * @return the map_type
 	 */
-	public Integer getMap_type() {
+	public String getMap_type() {
 		return map_type;
 	}
 	/**
 	 * @param map_type the map_type to set
 	 */
-	public void setMap_type(Integer map_type) {
+	public void setMap_type(String map_type) {
 		this.map_type = map_type;
 	}
 	/**

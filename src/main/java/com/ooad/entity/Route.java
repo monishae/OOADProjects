@@ -3,22 +3,41 @@ package com.ooad.entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 /**
  * Entity to create individual routes for the map.
  * @author monishaelumalai
  *
  */
+@JsonPOJOBuilder
 public class Route {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@JsonProperty("Route_id")
 	private Integer Route_id;
+	
+	@JsonProperty("Route_name")
 	private String Route_name;
+	
+	@JsonProperty("Source_id")
 	private Integer Source_id;
+	
+	@JsonProperty("Source_name")
 	private String Source_name;
+	
+	@JsonProperty("Dest_id")
 	private Integer Dest_id;
+	
+	@JsonProperty("Dest_name")
 	private String Dest_name;
+	
+	@JsonProperty("Route_length")
 	private Integer Route_length;
+	
+	@JsonProperty("route_color")
 	private Color route_color;
 	/**
 	 * @return the route_id
