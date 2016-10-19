@@ -39,6 +39,10 @@ public class Route {
 	
 	@JsonProperty("route_color")
 	private Color route_color;
+	
+	@JsonProperty("routeOwner")
+	private Player routeOwner;
+	
 	/**
 	 * @return the route_id
 	 */
@@ -134,6 +138,18 @@ public class Route {
 	 */
 	public void setRoute_color(Color route_color) {
 		this.route_color = route_color;
+	}
+	/**
+	 * @return the routeOwner
+	 */
+	public Player getRouteOwner() {
+		return routeOwner;
+	}
+	/**
+	 * @param routeOwner the routeOwner to set
+	 */
+	public void setRouteOwner(Player routeOwner) {
+		this.routeOwner = routeOwner;
 	}
 	
 	
